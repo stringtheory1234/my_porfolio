@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Contacts</title>
+	<meta charset="utf-8">
+	<style type="text/css">
+		html{
+			background-image: url('back.jpg');
+			background-repeat: no-repeat;
+		}
+		body{
+			position: absolute;
+			width: 100%;
+			height: 100%;
+		}
+		.main{
+			display: flex;
+			flex-direction: column;
+			justify-content: space-around;
+			float: left;
+			width: 80%;
+			height: 40rem;
+			color: white;
+			color: black;
+			align-self: center;
+			margin: 3%;
+			margin-top: 7%;
+/*			margin: 0 auto;*/
+			font-size: 2em;
+		}
+		.images{
+			font-size: 4rem;
+			margin: 3%;
+			float: left;
+		}
+		.images a{
+			color: white;
+			text-decoration: none;
+		}
+
+		img{
+			display: block;
+			height: 4.2rem;
+			width: 4.2rem;
+			float: left;
+			margin-right: 3%;
+		}
+		.head{
+			font-size: 5rem;
+			position: 5%;
+			margin: 3%;
+			color: white;
+		}
+		a:hover{
+			color: #ccc;
+		}
+		@media screen and (max-width: 778px){
+			img{
+				display: none;
+			}
+		}
+	</style>
+</head>
+<body>
+
+	<div class="main">
+		<div class="head">
+			You can contact me on: 
+		</div>
+		<div class="images">
+			<img src="facebook.png">
+			<a href="facebook">Facebook</a>
+		</div>
+		<div class="images">
+			<img src="twitter.jpg">
+			<a href="cskjdb">Twitter</a>
+		</div>
+		<div class="images">
+			<img src="instagram.jpeg">
+			<a href="jdacnad">Instagram</a>
+		</div>
+	</div>
+</body>
+</html>

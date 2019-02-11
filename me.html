@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>About Me</title>
+	<meta charset="utf-8">
+	<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+	<script type="text/javascript">
+
+		setTimeout(function(){ 
+			function loadDoc() {
+		    var xhttp = new XMLHttpRequest();
+		    xhttp.onreadystatechange = function() {
+		        if (this.readyState == 4 && this.status == 200) {
+		            document.getElementById("ct").innerHTML = this.responseText;
+		            $('#loading').css('display', 'none');
+		            $('#txt_load').css('display', 'none');
+		       }
+		    };
+		    xhttp.open("GET", "test-content.html", true);
+		    xhttp.send();
+		}
+		loadDoc();
+		}, 3000);
+
+
+		  
+
+	</script>
+	<style type="text/css">
+		body{
+			position: absolute;
+			height: 100%;
+			width: 100%;
+			margin: 0px;
+			padding: 0px;
+			background-color: black;
+		}
+		.content{
+			align-self: center;
+			width: 60%;
+			height: 100%;
+			background-color: blue;
+			color: pink;
+			margin-left: 20%;
+			margin-right: 20%;
+			font-size: 3rem;
+			text-align: center;
+		}
+		.content img{
+			position: relative;
+			display: block;
+			height: 50%;
+			width: 50%;
+			padding-top: 2%;
+			margin-left: 25%;
+			align-self: center;
+		}
+		.heading{
+			margin: 0px;
+			padding: 0px;
+			color: white;
+			font-size: 3.5rem;
+			text-align: center;
+		}
+		#loading{
+			height: 10vh;
+			width: 10vh;
+			position: absolute;
+			top: 50%;
+			left: 50%;
+		}
+		#txt_load{
+			position: absolute;
+			top: 65%;
+			left: 47%;
+			font-size: 2rem;
+		}
+		@media screen and (max-width: 778px){
+			.content{
+			width: 80%;
+			height: 100%;
+			margin-left: 10%;
+			margin-right: 10%;
+			font-size: 2rem;
+		}
+		}
+	</style>
+</head>
+<body>
+		
+		<div id="container" style="height: 100%; width: 100%;">
+		    <div id="loads">
+		    	<img src="loader.gif" id="loading">
+		    	<p id="txt_load" style="color: white;">
+		    		LOADING......
+		    	</p>
+		    <div>
+		    <div id="ct">
+			   
+		    </div>
+		</div>
+
+		
+</body>
+</html>
